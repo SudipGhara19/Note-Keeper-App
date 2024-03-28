@@ -9,7 +9,7 @@ export default function NoteForm(){
   <textarea className="input form-control" placeholder="Add a note..." id="floatingTextarea"></textarea>
   
 
-                <button type="button" class="btn btn-success">Add</button>
+                <button type="button" class="btn btn-success"><i class="fa-solid fa-plus"></i></button>
             </form>
         </div>
     );
