@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import './noteForm.css';
+import { useDispatch } from 'react-redux';
+import { noteAction } from '../../redux/noteReducer';
 
 export default function NoteForm(){
     const [noteText, setNoteText] = useState('');
 
+    const dispatch = useDispatch();
+
     // after clicking add button this function will trigger
     const onHandleSubmit = (e) => {
         e.preventDefault();
+        dispatch(noteAction.add(noteText));
         setNoteText('');
     };
 

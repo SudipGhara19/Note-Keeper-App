@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    notes: [],
+    notes: [
+        {id:1, text:"To implement the update function in your Redux slice for managing notes", createdOn: new Date().toLocaleString()},
+        {id:2, text:"To implement the update function in your Redux slice for managing notes", createdOn: new Date().toLocaleString()},
+    ],
 }
 
 const noteSlice = createSlice({
@@ -16,7 +19,8 @@ const noteSlice = createSlice({
         add:(state, action) => {
             state.notes.push({
                 id: state.notes.length + 1,
-                text: action.payload
+                text: action.payload,
+                createdOn: new Date().toLocaleString(),
             })
         },
 
